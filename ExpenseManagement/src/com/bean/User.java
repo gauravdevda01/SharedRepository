@@ -12,6 +12,23 @@ public class User
 	private Integer roleId;
 	private Character isActive;
 	
+	public User()
+	{}
+	
+	public User(String firstName, String middleName, String lastName, String email, Integer mobileNum, String userName,
+			String password, Integer roleId, Character isActive) {
+		super();
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+		this.email = email;
+		this.mobileNum = mobileNum;
+		this.userName = userName;
+		this.password = password;
+		this.roleId = roleId;
+		this.isActive = isActive;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}

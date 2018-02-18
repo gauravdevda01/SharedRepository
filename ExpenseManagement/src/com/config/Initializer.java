@@ -8,7 +8,7 @@ public class Initializer implements ServletContextListener{
 	@Override
 	public void contextDestroyed(ServletContextEvent arg0) {
 		System.out.println(".... Initializing Context....");
-		PropertyUtil.initProperties();
+		PropertyUtil.getInstance().initProperties();
 	}
 
 	@Override

@@ -4,8 +4,22 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertyUtil {
-	private static Properties properties=null;
-	public static void initProperties()
+	private static PropertyUtil propertyUtil=null;
+	public static PropertyUtil getInstance()
+	{
+		if(propertyUtil==null)
+		{
+			propertyUtil=new PropertyUtil();
+			
+		}
+		return propertyUtil;
+	}
+	private PropertyUtil()
+	{
+		initProperties();
+	}
+	private Properties properties=null;
+	public void initProperties()
 	{
 		if(properties==null)
 		{
@@ -23,12 +37,12 @@ public class PropertyUtil {
 		
 	}
 	
-	public static Properties getAllProperties()
+	public  Properties getAllProperties()
 	{
 		return properties;
 	}
 	
-	public static String getProperty(String propertyName)
+	public String getProperty(String propertyName)
 	{
 		return properties.getProperty(propertyName);
 	}
