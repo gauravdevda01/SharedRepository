@@ -10,11 +10,11 @@
 <body>
 	
 	<h3 style="margin-left:200px"><strong>Expense Management</strong></h3>
-	<form action="login" method="post">
+	<form action="LoginServlet" method="post">
 		<table>
 			<tr>
 				<td>User Name:</td>
-				<td><input type="text" name="uName" id="uNAme"></input></td>
+				<td><input type="text" name="uName" id="uName"></input></td>
 			</tr>
 		
 			<tr>
@@ -25,6 +25,7 @@
 		<p style="color:red"><%=request.getAttribute("msg")==null?"" :request.getAttribute("msg")%></p>
 		<button style="margin-left:100px" name="submit" value="Submit">Submit</button>
 	</form>
-	
+	<br/>
+	New User: <a href="RequestPage.jsp">Register Here</a>
 </body>
 </html>
